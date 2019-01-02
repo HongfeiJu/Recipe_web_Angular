@@ -46,4 +46,9 @@ export class RecipeService {
      this.recipeChange.next(this.recipes.slice());
    }
 
+   loadRecipes(recipes: Recipe[]) {
+     this.recipes = recipes;
+     this.recipeChange.next(this.recipes.slice());
+   }
+
 }
