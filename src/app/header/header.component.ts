@@ -2,6 +2,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {RecipeService} from '../recipes/recipe.service';
 import {DataStorageService} from '../shared/data-storage.service';
 import {Recipe} from '../recipes/recipe.model';
+import {AuthService} from '../auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ import {Recipe} from '../recipes/recipe.model';
 export class HeaderComponent implements OnInit {
   @Output('featureSelected') switchView = new EventEmitter<string>();
   constructor(private recipeService: RecipeService,
-              private dataStorageService: DataStorageService) { }
+              private dataStorageService: DataStorageService,
+              private authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -40,6 +42,10 @@ export class HeaderComponent implements OnInit {
         this.recipeService.loadRecipes(recipes);
       }
     );
+  }
+
+  onLogOut() {
+    this.authService.logOut();
   }
 
 }
