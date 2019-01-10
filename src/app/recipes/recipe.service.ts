@@ -8,10 +8,10 @@ import {Subject} from 'rxjs';
 export class RecipeService {
   recipeChange = new Subject();
    private recipes: Recipe[] = [
-    new Recipe('Hongshao Pork', 'most popular pork cooking',
-      'https://ali.xinshipu.cn/20110825/original/1314251955118.jpg@288w_216h_99q_1e_1c.jpg',
+    new Recipe('Red Braised Pork Belly', 'red cooked Chinese Pork dish',
+      'http://m.360buyimg.com/pop/jfs/t23242/143/2005060588/30368/844015e9/5b7139f8N4382e202.jpg',
       [new Ingredient('pork', 200), new Ingredient('soy sauce', 10)]),
-    new Recipe('Kongbao Chicken', 'most popular chicken cooking',
+    new Recipe('Kung Pao chicken', 'a spicy, stir-fried Chinese chicken dish',
       'https://i.pinimg.com/474x/14/1f/65/141f65a728bd8847d83093ed9a1cd7ce--gong-bao-chicken-asian-foods.jpg',
       [new Ingredient('chicken breast', 200), new Ingredient('peanuts', 30)])
   ];

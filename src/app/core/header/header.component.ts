@@ -18,10 +18,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelect(para: string ) {
-    this.switchView.emit(para);
-  }
-
   onSaveData() {
     this.dataStorageService.saveData().subscribe(
       value => console.log('done' + value),
@@ -46,6 +42,10 @@ export class HeaderComponent implements OnInit {
 
   onLogOut() {
     this.authService.logOut();
+  }
+
+  isAuthenticated() {
+    return this.authService.isAuthenticated();
   }
 
 }
