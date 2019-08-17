@@ -2,9 +2,10 @@ import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 import {NgModule} from '@angular/core';
 import {HomeComponent} from './core/home/home.component';
+import {SigninComponent} from './auth/signin/signin.component';
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: SigninComponent},
   {path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule'},
   {path: 'shopping-list', component: ShoppingListComponent}
 ];
